@@ -1,0 +1,24 @@
+name: apple-fonts-updater
+
+on:
+  workflow_dispatch
+
+jobs:
+  updater:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@main
+      with:
+        ref: ${{ github.head_ref }}
+        
+    - name: Update ubuntu-latest with dependencies
+      run: sudo apt-get install -y p7zip-full wget
+        
+    - name: Run update.sh
+      run: ./update.sh
+      shell: bash
+      
+    - uses: stefanzweifel/git-auto-commit-action@master
+      with:
+        commit_message: apple-fonts auto-update

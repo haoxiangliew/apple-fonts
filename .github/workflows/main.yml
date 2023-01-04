@@ -4,7 +4,7 @@ on:
   workflow_dispatch
 
 jobs:
-  updater:
+  update:
     runs-on: ubuntu-latest
     
     steps:
@@ -21,4 +21,4 @@ jobs:
       
     - uses: stefanzweifel/git-auto-commit-action@master
       with:
-        commit_message: apple-fonts auto-update
+        commit_message: apple-fonts autoupdate

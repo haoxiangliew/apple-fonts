@@ -1,7 +1,9 @@
 name: apple-fonts-updater
 
 on:
-  workflow_dispatch
+  schedule:
+    - cron: "0 0 1 * *"
+  workflow_dispatch:
 
 jobs:
   update:

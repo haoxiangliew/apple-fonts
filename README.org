@@ -9,3 +9,4 @@ Most notably used in my [[https://github.com/haoxiangliew/nixos/blob/master/pack
 
 ** Updating
 - Running ~./update.sh~ will fetch the latest packages from Apple and update the repository
+- Via [[https://github.com/haoxiangliew/apple-fonts/blob/master/.github/workflows/main.yml][Github Actions]] the repository will fetch the latest fonts and update every month / workflow dispatch

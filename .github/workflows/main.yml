@@ -24,3 +24,5 @@ jobs:
     - uses: stefanzweifel/git-auto-commit-action@master
       with:
         commit_message: apple-fonts autoupdate
+
+    - uses: Entepotenz/keep-github-actions-alive-min-dependencies@v1

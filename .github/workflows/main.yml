@@ -25,4 +25,8 @@ jobs:
       with:
         commit_message: apple-fonts autoupdate
 
-    - uses: Entepotenz/keep-github-actions-alive-min-dependencies@v1
+  keep-alive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - uses: gautamkrishnar/keepalive-workflow@main

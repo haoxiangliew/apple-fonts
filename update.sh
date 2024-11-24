@@ -5,8 +5,11 @@ echo 'Downloading packages from Apple...'
 wget https://devimages-cdn.apple.com/design/resources/download/SF-Pro.dmg
 wget https://devimages-cdn.apple.com/design/resources/download/SF-Compact.dmg
 wget https://devimages-cdn.apple.com/design/resources/download/SF-Mono.dmg
-wget https://devimages-cdn.apple.com/design/resources/download/SF-Arabic.dmg
 wget https://devimages-cdn.apple.com/design/resources/download/NY.dmg
+wget https://devimages-cdn.apple.com/design/resources/download/SF-Arabic.dmg
+wget https://devimages-cdn.apple.com/design/resources/download/SF-Armenian.dmg
+wget https://devimages-cdn.apple.com/design/resources/download/SF-Georgian.dmg
+wget https://devimages-cdn.apple.com/design/resources/download/SF-Hebrew.dmg
 
 echo
 
@@ -42,6 +45,19 @@ rm -rf SFCompactFonts
 
 echo
 
+echo 'Extracting NY...'
+7z x NY.dmg
+cd NYFonts
+7z x 'NY Fonts.pkg'
+7z x 'Payload~'
+cd ./Library/Fonts/
+cp * ../../../
+cd ../../../
+rm NY.dmg
+rm -rf NYFonts
+
+echo
+
 echo 'Extracting SF Mono...'
 7z x SF-Mono.dmg
 cd SFMonoFonts
@@ -68,16 +84,42 @@ rm -rf SFArabicFonts
 
 echo
 
-echo 'Extracting NY...'
-7z x NY.dmg
-cd NYFonts
-7z x 'NY Fonts.pkg'
+echo 'Extracting SF Armenian...'
+7z x SF-Armenian.dmg
+cd SFArmenianFonts
+7z x 'SF Armenian Fonts.pkg'
 7z x 'Payload~'
 cd ./Library/Fonts/
 cp * ../../../
 cd ../../../
-rm NY.dmg
-rm -rf NYFonts
+rm SF-Armenian.dmg
+rm -rf SFArmenianFonts
+
+echo
+
+echo 'Extracting SF Georgian...'
+7z x SF-Georgian.dmg
+cd SFGeorgianFonts
+7z x 'SF Georgian Fonts.pkg'
+7z x 'Payload~'
+cd ./Library/Fonts/
+cp * ../../../
+cd ../../../
+rm SF-Georgian.dmg
+rm -rf SFGeorgianFonts
+
+echo
+
+echo 'Extracting SF Hebrew...'
+7z x SF-Hebrew.dmg
+cd SFHebrewFonts
+7z x 'SF Hebrew Fonts.pkg'
+7z x 'Payload~'
+cd ./Library/Fonts/
+cp * ../../../
+cd ../../../
+rm SF-Hebrew.dmg
+rm -rf SFHebrewFonts
 
 echo
 

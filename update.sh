@@ -10,7 +10,6 @@ wget https://devimages-cdn.apple.com/design/resources/download/SF-Arabic.dmg
 wget https://devimages-cdn.apple.com/design/resources/download/SF-Armenian.dmg
 wget https://devimages-cdn.apple.com/design/resources/download/SF-Georgian.dmg
 wget https://devimages-cdn.apple.com/design/resources/download/SF-Hebrew.dmg
-wget https://devimages-cdn.apple.com/design/resources/download/SF-Symbols-6.dmg
 
 echo
 
@@ -121,19 +120,6 @@ cp * ../../../
 cd ../../../
 rm SF-Hebrew.dmg
 rm -rf SFHebrewFonts
-
-echo
-
-echo 'Extracting SF Symbols...'
-7z x SF-Symbols-6.dmg
-cd SFSymbols
-7z x 'SF Symbols.pkg'
-7z x 'Payload~'
-cd ./Library/Fonts/
-cp * ../../../
-cd ../../../
-rm SF-Symbols-6.dmg
-rm -rf SFSymbols
 
 echo
 
